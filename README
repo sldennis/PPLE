@@ -1,0 +1,20 @@
+Use the create_table.sql to import the database to the server.
+
+The login table contains the default administrator account, change the id field to your own email address. 
+Enter a new name for your profile. There can be multiple profiles on a single database, and each profile is 
+like a datbase on its own. The password field is a md5 hash, the default password is 'password'.
+
+The influence table contains the ownership information, while the radar table contains the viewership information. 
+Change the id field in the influence table to the email you just entered for the id field of the login table.
+
+The config.php contains the variables where you can set your database connection, smtp server and administrative email.
+
+The notification.php contains the links to your APNS cert, which by default is named pple_prod.pem, under the cert folder.
+
+Once ready, download the PPLE app from the appstore, if you haven't done so. Go to the settings tab, and add a new profile.
+Profile Name = profile in the login table
+Profile URL = mywsdl.php of the url where this program is installed. e.g www.yourdomain.com/pple/mywsdl.php
+Login ID = id in the login table. 
+Login Password = password in the login table. 
+
+Use the administrator account first. Afterwhich, you can add new users from the PPLE app.
